@@ -563,9 +563,9 @@ T e m p l a t e M o
         <script src="js/click-scroll.js"></script>
         <script src="js/custom.js"></script>
         <script>
-            const button = document.getElementById("audioButton");
-            const video = document.getElementById("vid");
-            console.log(video)
+            const audioButton = document.getElementById("audioButton");
+            const videoById = document.getElementById("vid");
+            console.log("Load button and video", audioButton, videoById)
 
               button.addEventListener('click', () => {
                 if (video.muted) {
