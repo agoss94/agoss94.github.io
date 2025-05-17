@@ -85,7 +85,7 @@ https://templatemo.com/tm-583-festava-live
                             <li class="nav-item">
                                 <a class="nav-link click-scroll" href="#section_5">Kontakt</a>
                             </li>
-                            <button class="btn custom-btn d-lg-block d-none music-button" onclick="toggleMusic(this)">Play Music</button>
+                            <button id="audioButton" class="btn custom-btn d-lg-block d-none music-button">Play Music</button>
                             <audio class="bg-music" class="btn custom-btn" loop>
                                 <source src="./music/musik_1.mp3" type="audio/mpeg">
                                 Your browser does not supprt audio
@@ -94,22 +94,21 @@ https://templatemo.com/tm-583-festava-live
                     </div>
                 </div>
             </nav>
-            <script>
-                function toggleMusic(button) {
-                  const audio = document.getElementById('bg-music');
+<script>
+const button = document.getElementById('audioButton');
 
-                  if (audio.paused) {
-                    audio.play().then(() => {
-                      button.textContent = "Pause Music";
-                    }).catch((err) => {
-                      console.error("Play failed:", err);
-                    });
-                  } else {
-                    audio.pause();
-                    button.textContent = "Play Music";
-                  }
-                }
-              </script>
+console.log("Add music to", button)
+  button.addEventListener('click', () => {
+    if (video.muted) {
+      video.muted = false;
+      video.volume = 1.0;
+      button.textContent = '🔇 Audio deaktivieren';
+    } else {
+      video.muted = true;
+      button.textContent = '🔊 Audio aktivieren';
+    }
+  });
+</script>
 
             <section class="hero-section" id="section_1">
                 <div class="section-overlay"></div>
