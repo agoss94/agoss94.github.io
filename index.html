@@ -548,17 +548,15 @@ T e m p l a t e M o
         <script src="js/custom.js"></script>
         <script>
             const audioButton = document.getElementById("audioButton");
-            const videoById = document.getElementById("vid");
-            console.log("Load button and video", audioButton, videoById)
+            const video = document.getElementById("vid");
+            console.log("Load button and video", audioButton, video)
 
               button.addEventListener('click', () => {
                 if (video.muted) {
                   video.muted = false;
                   video.volume = 1.0;
-                  button.textContent = '🔇 Audio deaktivieren';
                 } else {
                   video.muted = true;
-                  button.textContent = '🔊 Audio aktivieren';
                 }
               });
         </script>
