@@ -98,6 +98,7 @@ https://templatemo.com/tm-583-festava-live
 const button = document.getElementById('audioButton');
 
 console.log("Add music to", button)
+const video = document.getElementById('vid');
   button.addEventListener('click', () => {
     if (video.muted) {
       video.muted = false;
@@ -167,7 +168,7 @@ console.log("Add music to", button)
                 </div>
 
                 <div class="video-wrap">
-                    <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                    <video id="vid" autoplay="" loop="" muted="" class="custom-video" poster="">
                         <source src="./video/video_mit_musik_weboptimiert.mp4" type="video/mp4">
 
                         Your browser does not support the video tag.
