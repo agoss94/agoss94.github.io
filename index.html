@@ -58,7 +58,7 @@ https://templatemo.com/tm-583-festava-live
                         Heide Live
                     </a>
 
-                    <button id="audioButton1" class="btn custom-btn d-lg-block d-none music-button">Play Music</button>
+                    <button id="audioButton" class="btn custom-btn music-button">Play Music</button>
     
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -85,7 +85,6 @@ https://templatemo.com/tm-583-festava-live
                             <li class="nav-item">
                                 <a class="nav-link click-scroll" href="#section_5">Kontakt</a>
                             </li>
-                            <button id="audioButton2" class="btn custom-btn d-lg-block d-none music-button">Play Music</button>
                         </ul>
                     </div>
                 </div>
@@ -547,19 +546,10 @@ T e m p l a t e M o
         <script src="js/click-scroll.js"></script>
         <script src="js/custom.js"></script>
         <script>
-            const button1 = document.getElementById("audioButton1");
-            const button2 = document.getElementById("audioButton2");
+            const button = document.getElementById("audioButton");
             const video = document.getElementById("vid");
 
-              button1.addEventListener('click', () => {
-                if (video.muted) {
-                  video.muted = false;
-                  video.volume = 1.0;
-                } else {
-                  video.muted = true;
-                }
-              });
-            button2.addEventListener('click', () => {
+              button.addEventListener('click', () => {
                 if (video.muted) {
                   video.muted = false;
                   video.volume = 1.0;
